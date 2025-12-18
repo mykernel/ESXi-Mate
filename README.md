@@ -7,71 +7,71 @@
 [![React](https://img.shields.io/badge/react-18+-61dafb.svg)](https://reactjs.org/)
 [![Docker](https://img.shields.io/badge/docker-ready-2496ed.svg)](https://www.docker.com/)
 
-**A lightweight, modern web interface for managing standalone VMware ESXi hosts.**
+**一个轻量级、现代化的 ESXi 单机管理 Web 界面。**
 
-*Simpler than vCenter, friendlier than the default UI.*
+*比 vCenter 更简单，比官方 UI 更友好。*
 
-[Features](#features) • [Quick Start](#quick-start) • [Development](#development) • [License](#license)
+[功能特性](#功能特性) • [快速开始](#快速开始-docker) • [本地开发](#本地开发) • [开源协议](#开源协议)
 
 </div>
 
 ---
 
-## 📖 Introduction
+## 📖 项目介绍
 
-**ESXi-Mate** is an open-source project designed to provide a clean and efficient dashboard for managing ESXi infrastructure. It utilizes `pyVmomi` to communicate directly with ESXi hosts without the need for vCenter Server.
+**ESXi-Mate** 是一个从 [OpsNav](https://github.com/opsnav) 孵化出的独立开源项目，旨在为 ESXi 基础设施提供一个清爽、高效的管理面板。它通过 `pyVmomi` 直接与 ESXi 主机通信，无需依赖庞大的 vCenter Server。
 
-> **Target Audience**: Homelab users, SMB administrators, and anyone managing standalone ESXi nodes.
+> **适用人群**：Homelab 玩家、中小企业管理员，以及任何需要管理独立 ESXi 节点的用户。
 
-## ✨ Features
+## ✨ 功能特性
 
-- **🚀 Host Management**: Add, monitor, and organize ESXi hosts.
-- **📊 Resource Monitoring**: Real-time CPU, Memory, and Storage usage visualization.
-- **💻 VM Operations**: Power control (On/Off/Reset/Shutdown).
-- **📦 Clone & Provision**: Clone VMs quickly with task tracking.
-- **🔧 Tools Integration**: One-click VMware Tools installation via SSH.
-- **⚡ Zero Dependency**: Uses SQLite by default. No heavy database required.
+- **🚀 主机纳管**：轻松添加、监控和管理多台 ESXi 主机。
+- **📊 资源监控**：实时可视化展示 CPU、内存和存储的使用情况。
+- **💻 虚拟机管理**：支持电源操作（开机/关机/重置/断电）。
+- **📦 克隆与置备**：支持虚拟机快速克隆，提供后台任务进度追踪。
+- **🔧 Tools 集成**：通过 SSH 一键安装 VMware Tools。
+- **⚡ 零依赖**：默认使用 SQLite 数据库，开箱即用，无需额外部署数据库。
 
-## 🛠 Compatibility
+## 🛠 兼容性
 
-| Component | Version / Note |
+| 组件 | 版本 / 说明 |
 |-----------|----------------|
-| **VMware ESXi** | **7.0.0** (Verified) |
-| vCenter | Not supported (Standalone focus) |
+| **VMware ESXi** | **7.0.0** (已验证) |
+| vCenter | 不支持 (专注于单机管理) |
 
-## 🚀 Quick Start (Docker)
+## 🚀 快速开始 (Docker)
 
-The fastest way to get started is using Docker Compose.
+使用 Docker Compose 是最快的上手方式。
 
 ```bash
-# Clone the repository
+# 克隆仓库
 git clone https://github.com/mykernel/ESXi-Mate.git
 cd ESXi-Mate
 
-# Start services
+# 启动服务
 docker-compose up -d
 ```
 
-Access the dashboard at: **http://localhost:9528**
+启动后访问：**http://localhost:9528**
 
-## ⚙️ Configuration
+## ⚙️ 配置说明
 
-### Default Ports
-- **Frontend**: `9528`
-- **Backend API**: `9601`
+### 默认端口
+- **前端 Web**: `9528`
+- **后端 API**: `9601`
 
-### Environment Variables
-The backend is pre-configured for SQLite. You can customize it in `backend/.env` or `docker-compose.yml`:
+### 环境变量
+后端默认预配置了 SQLite。你可以在 `backend/.env` 或 `docker-compose.yml` 中自定义：
 
-| Variable | Default | Description |
+| 变量名 | 默认值 | 说明 |
 |----------|---------|-------------|
-| `DATABASE_URL` | `sqlite:///./esxi_mate.db` | DB Connection String (Supports MySQL) |
-| `APP_PORT` | `9601` | Backend Port |
-| `CORS_ORIGINS` | `http://localhost:9528` | Allowed CORS Origins |
+| `DATABASE_URL` | `sqlite:///./esxi_mate.db` | 数据库连接字符串 (支持 MySQL) |
+| `APP_PORT` | `9601` | 后端监听端口 |
+| `CORS_ORIGINS` | `http://localhost:9528` | 允许的 CORS 跨域来源 |
 
-## 💻 Local Development
+## 💻 本地开发
 
-### Backend (FastAPI)
+### 后端 (FastAPI)
 ```bash
 cd backend
 python -m venv venv
@@ -80,16 +80,16 @@ pip install -r requirements.txt
 python main.py
 ```
 
-### Frontend (React + Vite)
+### 前端 (React + Vite)
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-## 📄 License
+## 📄 开源协议
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+本项目基于 MIT 协议开源 - 详见 [LICENSE](LICENSE) 文件。
 
 ---
 <div align="center">
