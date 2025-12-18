@@ -85,7 +85,7 @@ docker-compose up -d
 ### 环境变量
 后端默认预配置了 SQLite。你可以在 `backend/.env` 或 `docker-compose.yml` 中自定义：
 
-| 变量名 | 默认值 | 说明 |
+| Variable | Default | Description |
 |----------|---------|-------------|
 | `DATABASE_URL` | `sqlite:///./esxi_mate.db` | 数据库连接字符串 (支持 MySQL) |
 | `APP_PORT` | `9601` | 后端监听端口 |
@@ -114,6 +114,9 @@ npm run dev
 本项目基于 MIT 协议开源 - 详见 [LICENSE](LICENSE) 文件。
 
 ---
+
+> 🤖 **Credits**: 本项目由 **Gemini CLI** (`gemini-3-pro-preview`) 与 **CodeX** (`gpt-5.1-codex-max` high mode) 完全自主开发，**0 人工干预**。
+
 <div align="center">
   <sub>Built with ❤️ by the Open Source Community</sub>
 </div>
