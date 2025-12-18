@@ -11,19 +11,19 @@
 
 *比 vCenter 更简单，比官方 UI 更友好。*
 
-[功能特性](#功能特性) • [快速开始](#快速开始-docker) • [本地开发](#本地开发) • [开源协议](#开源协议)
+[功能特性](#features) • [快速开始](#quick-start) • [本地开发](#development) • [开源协议](#license)
 
 </div>
 
 ---
 
-## 📖 项目介绍
+## 📖 <span id="intro">项目介绍</span>
 
 **ESXi-Mate** 是一个从 [OpsNav](https://github.com/opsnav) 孵化出的独立开源项目，旨在为 ESXi 基础设施提供一个清爽、高效的管理面板。它通过 `pyVmomi` 直接与 ESXi 主机通信，无需依赖庞大的 vCenter Server。
 
 > **适用人群**：Homelab 玩家、中小企业管理员，以及任何需要管理独立 ESXi 节点的用户。
 
-## ✨ 功能特性
+## ✨ <span id="features">功能特性</span>
 
 - **🚀 主机纳管**：轻松添加、监控和管理多台 ESXi 主机。
 - **📊 资源监控**：实时可视化展示 CPU、内存和存储的使用情况。
@@ -32,14 +32,14 @@
 - **🔧 Tools 集成**：通过 SSH 一键安装 VMware Tools。
 - **⚡ 零依赖**：默认使用 SQLite 数据库，开箱即用，无需额外部署数据库。
 
-## 🛠 兼容性
+## 🛠 <span id="compat">兼容性</span>
 
 | 组件 | 版本 / 说明 |
 |-----------|----------------|
 | **VMware ESXi** | **7.0.0** (已验证) |
 | vCenter | 不支持 (专注于单机管理) |
 
-## 🚀 快速开始 (Docker)
+## 🚀 <span id="quick-start">快速开始 (Docker)</span>
 
 使用 Docker Compose 是最快的上手方式。
 
@@ -54,7 +54,7 @@ docker-compose up -d
 
 启动后访问：**http://localhost:9528**
 
-## ⚙️ 配置说明
+## ⚙️ <span id="config">配置说明</span>
 
 ### 默认端口
 - **前端 Web**: `9528`
@@ -69,7 +69,7 @@ docker-compose up -d
 | `APP_PORT` | `9601` | 后端监听端口 |
 | `CORS_ORIGINS` | `http://localhost:9528` | 允许的 CORS 跨域来源 |
 
-## 💻 本地开发
+## 💻 <span id="development">本地开发</span>
 
 ### 后端 (FastAPI)
 ```bash
@@ -87,7 +87,7 @@ npm install
 npm run dev
 ```
 
-## 📄 开源协议
+## 📄 <span id="license">开源协议</span>
 
 本项目基于 MIT 协议开源 - 详见 [LICENSE](LICENSE) 文件。
 
