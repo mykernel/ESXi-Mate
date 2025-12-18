@@ -15,7 +15,8 @@
 
 </div>
 
-> 🤖 **Credits**: 本项目由 **Gemini CLI** (`gemini-3-pro-preview`) 与 **CodeX** (`gpt-5.1-codex-max` high mode) 完全自主开发，**0 人工干预**。展现了 AI 编码的强大能力与大势所趋。
+> 🤖 **Credits**: 本项目从需求分析、架构设计、代码开发、测试验证，到 Docker 部署脚手架编写及 GitHub 仓库维护，均由 **Gemini CLI** (`gemini-3-pro-preview`) 与 **CodeX** (`gpt-5.1-codex-max` high mode) 协作完成。
+> **全程 0 人工干预**，展现了 AI 赋能软件工程的强大能力与未来趋势。
 
 ---
 
