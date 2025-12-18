@@ -1,0 +1,14 @@
+# FastAPI 核心
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+pydantic==2.9.0
+
+# 数据库
+sqlalchemy==2.0.36
+pymysql==1.1.1  # 可选：使用 MySQL 时需要
+
+# 工具
+python-dotenv==1.0.0
+pyvmomi==8.0.1.0  # ESXi 直连
+requests==2.32.3  # Guest 文件上传
+paramiko==3.4.0   # SSH 安装 Tools

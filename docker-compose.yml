@@ -1,0 +1,29 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      args:
+        PIP_INDEX_URL: https://mirrors.aliyun.com/pypi/simple
+      network: host
+    container_name: esxi-mate-backend
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: 9601
+      DEBUG: "False"
+      DATABASE_URL: sqlite:////data/esxi_mate.db
+      CORS_ORIGINS: http://localhost:9528
+      # ESXI_USER: root
+      # ESXI_PASSWORD: your_esxi_password
+    volumes:
+      - ./data:/data
+    ports:
+      - "9601:9601"
+
+  frontend:
+    build: ./frontend
+    container_name: esxi-mate-frontend
+    depends_on:
+      - backend
+    ports:
+      - "9528:80"
