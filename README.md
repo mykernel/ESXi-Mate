@@ -61,7 +61,7 @@
 
 ## 🚀 <span id="quick-start">快速开始 (Docker)</span>
 
-使用 Docker Compose 是最快的上手方式。
+使用 Docker Compose 是最快的上手方式。**默认配置开箱即用，无需修改任何文件即可启动。**
 
 ```bash
 # 克隆仓库
@@ -74,7 +74,9 @@ docker-compose up -d
 
 启动后访问：**http://localhost:9528**
 
-## ⚙️ <span id="config">配置说明</span>
+## ⚙️ <span id="config">高级配置 (可选)</span>
+
+> 以下内容仅在您需要修改默认端口、数据库或跨域设置时参考，**初次使用请跳过**。
 
 ### 默认端口
 - **前端 Web**: `9528`
