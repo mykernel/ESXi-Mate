@@ -15,6 +15,8 @@
 
 </div>
 
+> 🤖 **Credits**: 本项目由 **Gemini CLI** (`gemini-3-pro-preview`) 与 **CodeX** (`gpt-5.1-codex-max` high mode) 完全自主开发，**0 人工干预**。展现了 AI 编码的强大能力与大势所趋。
+
 ---
 
 ## 📖 <span id="intro">项目介绍</span>
@@ -114,9 +116,6 @@ npm run dev
 本项目基于 MIT 协议开源 - 详见 [LICENSE](LICENSE) 文件。
 
 ---
-
-> 🤖 **Credits**: 本项目由 **Gemini CLI** (`gemini-3-pro-preview`) 与 **CodeX** (`gpt-5.1-codex-max` high mode) 完全自主开发，**0 人工干预**。
-
 <div align="center">
   <sub>Built with ❤️ by the Open Source Community</sub>
 </div>
